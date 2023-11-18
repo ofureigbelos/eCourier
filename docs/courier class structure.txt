@@ -1,0 +1,108 @@
+Couier General Class
+++++++++++++++++++++++++++
+
+CourierSettings --- static class
+	static method --- getConfig()
+	static method --- getConfigStatus()
+	static method --- getConfigStatusInfo()
+	static method --- getConfigStatusInfo($status)
+	static method --- checkConfigStatus($status)
+	static method --- getNotification($type)
+	
+	
+courier ---- class
+	public $waybill;
+    public $invoice;
+    public $shipper_name;
+    public $shipper_phone;
+    public $shipper_email;
+    public $shipper_address;
+    public $rec_name;
+    public $rec_phone;
+    public $rec_email;
+    public $rec_address;
+    public $shipment_type;
+    public $shipment_mode;
+    public $product_info;
+    public $weight;
+    public $qty;
+    public $payment_mode;
+    public $total_amount;
+    public $from_des;
+    public $to_des;
+    public $pickup_time;
+    public $pickup_date;
+    public $status_notice;
+    public $status;
+    public $status_del;
+    public $comment;
+    public $date;
+	
+	
+	method --- getStatusName($status)
+	method --- getStatusColor($status)
+	method --- getClass($classname)
+	method --- checkWaybill($waybill)
+	method --- getCourierMainInfo($waybill)
+	method --- getCourierOtherInfo($invoice, $limit = '5')
+	method --- getCourierAdminData($invoice)
+	method --- getCourierAdminProgress($invoice, $limit = '5')
+	
+	
+	
+courierStatus ---- class
+	public $invoice; 
+    public $new_loc; 
+    public $to_des;
+    public $comment; 
+    public $status_notice; 
+    public $status_del; 
+    public $status_key; 
+    public $date; 
+
+
+SendMail  ---- static class
+	static method --- mail($send = false, $subject, $message, $to)
+	
+	
+admin ---- class
+	public $user_id;
+    public $name;
+    public $username;
+    public $email;
+    public $password;
+    public $phone;
+    public $token;
+    public $role;
+    public $status;
+    public $date;
+	
+	method --- generateToken()
+	method --- checkStaffUser($username, $email, $phone)
+	method --- getStaffInfo()
+	method --- autoLogin()
+	method --- generateUsername($name)
+	
+	
+	
+adminAddress  ---- class
+	public $user_id;
+    public $origin;
+    public $state;
+    public $address;
+    public $timezone;
+    public $branch;
+    public $dob;
+    public $date;
+	
+	method --- getStaffAddress()
+	method --- setTimezone()
+	method --- 
+	
+	
+	
+	
+	
+	
+	
+	

@@ -1,0 +1,107 @@
+<?php
+
+/* 
+|---------------------------------------------------
+| Including our connection handler file
+|---------------------------------------------------
+*/
+
+include_once 'connection.php';
+
+/* 
+|---------------------------------------------------
+| Including init.php file
+|---------------------------------------------------
+*/
+
+include_once SRV_ROOT . 'ssh/init.php';
+
+/* 
+|---------------------------------------------------
+| Start session and Error Handlers
+|---------------------------------------------------
+*/
+
+session_and_error(true, true);
+
+/* 
+|---------------------------------------------------
+| Loading environment
+|---------------------------------------------------
+*/
+
+loadEnvironment('.env', true, 'env.txt', false);
+
+/* 
+|---------------------------------------------------
+| Load database connection class
+|---------------------------------------------------
+*/
+
+includeExist('classes/connectDatabase.php');
+
+/* 
+|---------------------------------------------------
+| Load database creation class
+|---------------------------------------------------
+*/
+
+includeExist('classes/createDatabase.php');
+
+/* 
+|---------------------------------------------------
+| Load database import class
+|---------------------------------------------------
+*/
+
+includeExist('classes/importDatabase.php');
+
+/* 
+|---------------------------------------------------
+| Load general courier class
+|---------------------------------------------------
+*/
+
+includeExist('classes/courierGeneral.php');
+
+/* 
+|---------------------------------------------------
+| Loading other classes
+|---------------------------------------------------
+*/
+
+includeExist('classes/pagination.php');
+includeExist('classes/include/general.php');
+
+//global $ec;
+$ec['jsvoid'] = 'javascript:void(0)';
+
+//Load courier settings
+$load = new dbConnect();
+$load->stmt = $load->checkTable(TB_CONFIG);
+if($load->stmt['response'] === ERROR_200){
+    $ec['status'] = courierSettings::getConfigStatus();
+    $ec['config'] = courierSettings::getConfig();
+    $ec['class'] = [
+        'new' => 'track__progress_indicator__new',
+        'important' => 'track__progress_indicator__important',
+        'deliver' => 'track__progress_indicator__deliver',
+        'old' => 'track__progress_indicator__two'
+    ];
+}
+
+/* 
+|---------------------------------------------------
+| Rewrite HTACCESS
+|---------------------------------------------------
+*/
+
+rewriteHtaccess('.htaccess', 'xhr', true);
+
+/* 
+|---------------------------------------------------
+| include English File
+|---------------------------------------------------
+*/
+
+includeExist('ssh/include/english.php');

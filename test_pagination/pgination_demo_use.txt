@@ -1,0 +1,1 @@
+Check the index file on how to use the pagination class

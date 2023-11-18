@@ -1,0 +1,46 @@
+Sweet Alert
+https://sweetalert.js.org/
++++++++++++++++++++++++++++++++++++++++++
+
+Animate CSS
+https://daneden.github.io/animate.css/
+++++++++++++++++++++++++++++++++++++++++++
+
+TimePicker
+http://www.jonthornton.com/jquery-timepicker/
++++++++++++++++++++++++++++++++++++++++++++++++
+
+Date Picker
+https://fengyuanchen.github.io/datepicker/
++++++++++++++++++++++++++++++++++++++++++++++++
+
+Bootstrap Notify
+http://bootstrap-notify.remabledesigns.com/
++++++++++++++++++++++++++++++++++++++++++++++++
+
+Boostrap Toggle
+http://www.bootstraptoggle.com/
++++++++++++++++++++++++++++++++++++++++++++++++
+
+Js Color
+http://jscolor.com/
++++++++++++++++++++++++++++++++++++++++++++++++
+
+PHP Objects and Classes
+https://www.tutorialrepublic.com/php-tutorial/php-classes-and-objects.php
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Pagination Path Demo
+https://phppot.com/demo/ajax-pagination-with-php/
++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+TimeZone
+https://www.w3schools.com/php/php_ref_timezones.asp
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Environment (.env)
+https://github.com/vlucas/phpdotenv
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+

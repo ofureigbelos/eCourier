@@ -1,0 +1,193 @@
+
+
+@font-face{
+    font-family: 'Roboto';
+    src: url("../assets/fonts/Roboto-Regular.ttf") format("Truetype");
+    
+}
+
+*
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+body
+{
+    background-color: #f3f3f3;
+    font-family: "Roboto";
+}
+
+.check-error
+{
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.check-error p
+{
+    display: inline-block;
+}
+
+.pop-error
+{
+    font-size: 14px;
+}
+
+.pop-error title
+{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.top-header
+{
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+.top-header .container
+{
+    width: 100%;
+    max-width: 800px;
+}
+
+.indicator
+{
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 1px 15px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
+    margin-top: 30px;
+}
+
+.indicator::before, .indicator::after
+{
+    background: rgba(255, 255, 255, 0.75);
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: 20px;
+    right: 20px;
+    height: 13px;
+    border-radius: 7px 7px 0 0;
+    box-shadow: 0 -1px 7px rgba(0, 0, 0, 0.1);
+}
+
+.indicator::after
+{
+    left: 40px;
+    right: 40px;
+    top: -28px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.65);
+    z-index: -1;
+    box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.07);
+}
+
+.indicator-label
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    position: absolute;
+    background-color: #d3cfcd;
+    color: #fbfbfb;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    top: -5px;
+    left: 10px;
+    z-index: 10;
+  box-shadow: 0 -1px 7px rgba(0, 0, 0, 0.1);
+}
+
+
+.indicator-label-active
+{
+    background-color: #0ca678;
+    color: #ffffff;
+}
+
+.indicator h1
+{
+    font-size: 25px;
+    padding-left: 20px;
+    margin-bottom: 40px;
+}
+
+.indicator .reg
+{
+    position: relative;
+}
+
+.indicator .reg form
+{
+}
+
+.indicator .reg form input
+{
+    box-sizing: border-box;
+    background-color: #f3f3f3;
+    border-radius: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.indicator .reg form input:focus
+{
+    box-shadow: none;
+    background: #fff;
+}
+
+.indicator .reg .btn
+{
+    border-radius: 100px;
+    padding: 10px 30px;
+    font-size: 13px;
+}
+
+.indicator .reg .btn:focus, .indicator .reg .btn:active
+{
+    outline: none;
+}
+
+#step1
+{
+    position: relative;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#step2
+{
+    position: absolute;
+    z-index: 0;
+    opacity: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.finish
+{
+    position: relative;
+    background-image: url('../assets/images/party-time-confetti-cannon.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 200px;
+    background-color: #f6fcff;
+}
+

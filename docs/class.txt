@@ -1,0 +1,70 @@
+Database Class
+++++++++++++++++++++++++++
+
+dbConnect ---  class
+	public $conn;
+    public $stmt;
+    
+    protected $select_db;
+	
+    protected $error;
+    protected $message;
+	
+	method --- connectDatabase()
+	method --- checkErrorDB()
+	method --- checkSelectedDB()
+	method --- checkTable($tableName)
+	method --- runQuery($query)
+	method --- numRows($query)
+	
+
+
+
+dbCreate ---  class
+	protected $content;
+    	protected $error;
+    	protected $message;
+    
+    	public $query;
+	
+	method --- writeFile($dbHost,$dbUser,$dbPass,$dbName,$path)
+	/*
+	| ----------------------------------------------------------------------------
+	| API call request response return a class object. Below are the response code
+	| ----------------------------------------------------------------------------
+	| ->message (return the messages)
+	| ->response  (return the response code)
+	| 
+	|   if ->response === 404 (file to path does'nt exist
+	|   if ->response === 400 (Failed to write file
+	|   if ->response === 200 (Success writing file
+	| 
+	|   using json_decode(object);
+	*/
+	
+	
+	
+
+dbImport ---  class
+	protected $template;
+    	protected $realpath;
+    	protected $read;
+    
+    	protected $error;
+    	protected $message;
+    
+    public $query;
+	
+	method --- startImport($path = NULL)
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

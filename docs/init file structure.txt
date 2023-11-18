@@ -1,0 +1,70 @@
+RESPONSE STATUS INFO
+/*
+|--------------------------------------------------------------------------
+|  ERROR HANDLER PACKAGE
+|--------------------------------------------------------------------------
+| 401 (Unauthorized) | 400 (Bad Request) | 403 (Forbidden) 
+| 404 (Not Found) | 200 (Success)
+*/
+
+
+function --- initTable
+function --- initStatus
+
+IFFE
+
+function --- session_and_error($session, $error)
+
+function --- echojson($response, $message)
+
+function --- obStart
+
+function --- obFlush
+
+function --- versionCompare($version)
+
+function --- includeExist($path)
+
+function --- file_or_dir($path, $type, $content = null)
+
+function --- loadEnv($path, $load, $contentPath, $contentLoad = false)
+					f --- initEnv()
+	
+function --- ajaxConfig()
+
+function --- passwordHash($crypt = '10')
+
+function --- passwordEncrypt($password, $crypt = '10')
+
+function --- passwordVerify($newPass, $oldPass)
+
+
+global ----- secure
+	'admin_session' => 'ad_session',
+    'admin_cookie' => '_adC',
+    'main_hash' => 'm_hash',
+    'user_cookie' => '_usC'
+	
+
+function --- sessionCreate
+
+function --- mainHashExist()
+
+function --- setNavigator($active)
+
+function --- rewriteHtaccess($path, $folder, $start = false)
+
+function --- insertStatement($tableName, $columns, $value)
+
+function --- checkLoggedIn()
+
+function --- restrictUser()
+
+function --- checkAdminRole()
+
+
+
+
+
+
+

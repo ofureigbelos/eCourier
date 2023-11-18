@@ -1,0 +1,61 @@
+.htaccess STRUCTURE
+-------------------------
+RewriteEngine on
+
+
+RewriteCond %{REQUEST_METHOD} !^POST$
+RewriteRule ^xhr/addparcel.php$ - [NC,R=404,L] 
+
+
+#All errors document handle
+#ErrorDocument 500 - (Internal Server Error)
+#ErrorDocument 502 - (Bad Gateway) 
+#ErrorDocument 503 - (Service Unavailable)
+#ErrorDocument 504 - (Gateway Timeout)
+#ErrorDocument 403 - (Forbidden)
+#ErrorDocument 404 - (Not Found)
+#ErrorDocument 405 - (Method Not Allowed)
+#ErrorDocument 408 - (Request Timed Out)
+
+ErrorDocument 404 /eCourier/404/index.php    
++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+.gitignore structure
+-------------------------
+/upload
+/classes
++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+.env structure
+---------------------
+#@ Loading our global environment
+#@ Developed by Tekh Developers
+#@ Copyright 2019 
+
+
+DB_HOST = 'localhost'
+DB_USERNAME = 'admin'
+DB_PASSWORD = 'admin'
+DB_DATABASE = 'ecourier'
+
+
+#Software secure
+APP_NAME = 'Udemy Course'
+APP_KEY = '0292-AH98-JSMSM-9383'
+APP_URL = 'link'
+APP_VERSION = 'v 1.2.0'
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+robots.txt
+---------------------------
+User-agent: *
+Disallow: /assets
+Disallow: /classes
+Disallow: /install
+Disallow: /shh
+Disallow: /staff_admin
+Disallow: /test_pagination
+Disallow: /upload
+Disallow: /xhr

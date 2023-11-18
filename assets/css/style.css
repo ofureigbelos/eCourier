@@ -1,0 +1,1043 @@
+
+
+@font-face{
+    font-family: 'Roboto';
+    src: url("../fonts/Roboto-Regular.ttf") format("Truetype");
+    
+}
+
+*
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+body
+{
+    background-color: #f3f3f3;
+    font-family: "Roboto";
+}
+
+.check-error
+{
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.check-error p
+{
+    display: inline-block;
+}
+
+.pop-error
+{
+    font-size: 14px;
+}
+
+.pop-error title
+{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.box__shadow
+{
+    box-shadow: 0 1px 15px 2px rgba(0, 0, 0, 0.1);
+}
+
+.text__shadow
+{
+    text-shadow: 0 0 10px #201207;
+}
+
+.bg__shadow
+{
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.text__bg__shadow
+{
+    background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0) 3%, rgb(0, 0, 0) 100%) !important;
+    opacity: 0.6 !important;
+    position: absolute !important;
+    height: 60% !important;
+    width: 100% !important;
+    left: 0px !important;
+    bottom: 0px !important;
+    text-align: center;
+    color: #fff;
+}
+
+.transition
+{
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.no__padding
+{
+    padding: 0;
+}
+
+#nav
+{
+    background-color: #ffffff;
+    position: relative;
+    margin: 0;
+}
+
+#nav .navbar-brand
+{
+}
+
+#nav .navbar-brand:focus, #nav .navbar-brand:active
+{
+    outline: none;
+}
+
+#nav .navbar-brand img
+{
+    width: 110px;
+}
+
+#nav .navbar-nav
+{
+    position: relative;
+}
+
+#nav .navbar-nav li
+{
+}
+
+#nav .navbar-nav li a
+{
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+#nav .active
+{
+    position: relative;
+}
+
+#nav .active a
+{
+    color: #132f91;
+    background-color: rgba(71, 97, 171, 0.15);
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    font-weight: bold;
+}
+
+#nav .active a:hover
+{
+    color: #81bd44;
+}
+
+#nav .active::before
+{
+    content: "";
+    position: absolute;
+    background-color: #81bd44;
+    height: 3px;
+    bottom: 0px;
+    width: 100%;
+    visibility: hidden;
+    -webkit-transition: all 0.2s ease-in;
+    -moz-transition: all 0.2s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    transform: scaleX(0);
+    left: 0;
+}
+
+#nav .active:hover::before
+{
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    -o-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.hero
+{
+    position: relative;
+    background-image: url('../images/banner3.jpg');
+    min-height: 500px;
+    background-size: cover;
+    background-position: center top;
+    width: 100%;
+    background-color: rgba(58, 116, 8, 0.21);
+}
+
+.hero__pointer
+{
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    bottom: -20px;
+    text-align: center;
+}
+
+.hero__pointer a
+{
+    display: inline-block;
+    background-color: #81bd44;
+    position: relative;
+    border-radius: 100px;
+    text-align: center;
+    width: 45px;
+    height: 46px;
+}
+
+.hero__pointer a i
+{
+    font-size: 30px;
+    color: #1a3da1;
+    border-radius: 100px;
+    position: relative;
+    padding-top: 9px;
+}
+
+.hero__pointer a:active, .hero__pointer a:focus
+{
+    outline: none;
+}
+
+.hero__content
+{
+    position: relative;
+    z-index: 5;
+    top: 120px;
+}
+
+.hero__content h1
+{
+    max-width: 450px;
+    width: 100%;
+    color: #fff;
+    font-size: 40px;
+    line-height: 130%;
+}
+
+.hero__content p
+{
+    width: 100%;
+    max-width: 450px;
+    font-size: 20px;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 150%;
+}
+
+.hero__content .btn
+{
+    padding: 10px 20px;
+    border-radius: 0;
+}
+
+.hero__content .btn:focus, .hero__content .btn:active
+{
+    outline: none;
+    border: 1px solid transparent;
+}
+
+@media (max-width:767px)
+{
+    .hero
+    {
+        width: 100%;
+        min-height: 380px;
+    }
+    .hero__content
+    {
+        top: 20px;
+    }
+    .hero__content h1
+    {
+        font-size: 35px;
+    }
+    .hero__content p
+    {
+    }
+}
+
+.hero2
+{
+    position: relative;
+    background-color: #41535d;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.hero2__top__div
+{
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.hero2__top__div h2
+{
+    color: #fff;
+    max-width: 170px;
+}
+
+.hero2__top__div .btn
+{
+    padding: 10px 20px;
+    border: 2px solid #5cb85c;
+    border-radius: 0;
+    background-color: transparent;
+    color: #5cb85c;
+}
+
+.hero2__top__div .btn:hover
+{
+    background-color: #5cb85c;
+    color: #fff;
+}
+
+.hero2__top__div .btn:focus, .hero2__top__div .btn:active
+{
+    outline: none;
+}
+
+.hero2__cards
+{
+    border-radius: 3px;
+    padding: 20px;
+    background-color: #ededed;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero2__cards:hover
+{
+    background-color: #5cb85c;
+}
+
+.hero2__cards:hover h2
+{
+    color: #fff;
+}
+
+.hero2__cards:hover p
+{
+    color: #fff;
+}
+
+.hero2__cards h2
+{
+    color: #41535d;
+    z-index: 5;
+}
+
+.hero2__cards p
+{
+    z-index: 5;
+    color: #41535d;
+}
+
+.hero2__cards .btn
+{
+    background-color: #5cb85c;
+    border-radius: 0;
+    border: 1px solid #5cb85c;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
+}
+
+.hero2__cards:hover .btn
+{
+    color: #5cb85c;
+    background-color: #fff;
+}
+
+.hero2__cards .btn:focus, .hero2__cards .btn:active
+{
+    outline: none;
+}
+
+.hero2__cards i
+{
+    font-size: 100px;
+    position: absolute;
+    bottom: -28px;
+    right: -10px;
+    z-index: 0;
+    opacity: 1;
+    color: #eadddd;
+}
+
+.hero2__cards:hover i
+{
+    color: rgba(71, 97, 171, 0.25);
+}
+
+.hero3
+{
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.hero3 .container
+{
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.hero3 h3
+{
+    color: #16307a;
+    font-weight: bold;
+    font-size: 30px;
+    max-width: 250px;
+}
+
+.hero3 p
+{
+    font-size: 20px;
+    color: #41535d;
+}
+
+.hero3 .btn
+{
+    padding: 10px 20px;
+    border: 2px solid #5cb85c;
+    border-radius: 0;
+    background-color: transparent;
+    color: #5cb85c;
+    letter-spacing: 0.4px;
+    text-transform: capitalize;
+    float: right;
+}
+
+.hero3 .btn:hover
+{
+    background-color: #5cb85c;
+    color: #fff;
+}
+
+.hero4
+{
+    position: relative;
+}
+
+.hero4__founder__wrap
+{
+    background: #27aae1 none repeat scroll 0% 0%;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    min-height: 250px;
+}
+
+.hero4__founder__wrap .cover
+{
+    position: relative;
+    bottom: -20px;
+    text-align: left;
+    padding-left: 120px;
+    z-index: 5;
+}
+
+.hero4__founder__wrap .cover h3
+{
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.hero4__founder__wrap .cover .btn
+{
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 0;
+    background-color: transparent;
+    color: #fff;
+}
+
+.hero4__founder__wrap .cover .btn:hover
+{
+    color: #27aae1;
+    background-color: #fff;
+}
+
+.hero4__img__wrap
+{
+    overflow: hidden;
+    position: relative;
+    background: rgb(216, 216, 216) none repeat scroll 0% 0%;
+    border-radius: 6px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url('../images/homepage-founders-image-new-01.jpg');
+    min-height: 250px;
+}
+
+.footer
+{
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.footer p
+{
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 150%;
+    letter-spacing: 1px;
+}
+
+.hero__contact
+{
+    position: relative;
+    background-image: url('../images/contact-us-banner-1.jpg');
+    min-height: 500px;
+    background-size: cover;
+    background-position: center top;
+    width: 100%;
+    background-color: rgba(58, 116, 8, 0.21);
+}
+
+.hero__contact2
+{
+    background-color: #fff;
+    padding-top: 70px;
+}
+
+.hero__contact2 form
+{
+    position: relative;
+}
+
+.hero__contact2 form input, .hero__contact2 form textarea, .hero__contact2 form select
+{
+    resize: none;
+    border-radius: 0;
+}
+
+.hero__contact2 form input:focus, .hero__contact2 form textarea:focus, .hero__contact2 form select:focus
+{
+    box-shadow: none;
+    background: #fff;
+}
+
+@media (max-width:767px)
+{
+    .hero__contact2 form
+    {
+        margin-top: 39px;
+    }
+    .hero2__top__div
+    {
+        margin-top: 50px;
+    }
+}
+
+.hero__contact2 form .check-error
+{
+    margin-bottom: 20px;
+}
+
+.track__section
+{
+    position: relative;
+}
+
+.box-shadow-track
+{
+    box-shadow: 0px 2px 10px -4px rgba(0, 0, 0, 0.30);
+}
+
+.track__section legend
+{
+    text-align: center;
+    position: relative;
+    padding-bottom: 0px;
+}
+
+.track__section legend div
+{
+    position: relative;
+    display: inline-block;
+}
+
+.track__section legend div img
+{
+    width: 150px;
+}
+
+.track__section legend span
+{
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.track__section label
+{
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+@media (max-width:479px)
+{
+    .track__section legend
+    {
+        text-align: center;
+    }
+    .track__section legend div img
+    {
+        width: 100px;
+    }
+    .track__section legend span
+    {
+        font-size: 15px;
+        letter-spacing: 0.5px;
+    }
+}
+
+.track__section .btn img
+{
+    width: 18px;
+    float: right;
+    position: relative;
+}
+
+.track__section .btn
+{
+    min-width: 140px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.track__section__div
+{
+    position: relative;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.track__section__div h3
+{
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.track__section__div h3::after
+{
+    content: "";
+    width: 50px;
+    height: 2px;
+    position: absolute;
+    background-color: #070948;
+    left: 0;
+    bottom: -10px;
+}
+
+.track__section__company__holder
+{
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.track__section__company__holder__left
+{
+    width: 50%;
+    position: relative;
+    display: inline-block;
+    background-color: #f9f9f9;
+    padding: 20px;
+    min-height: 150px;
+}
+
+.track__section__company__holder__left img
+{
+    width: 100px;
+}
+
+.track__section__company__holder__left h4
+{
+}
+
+.track__section__company__holder__left a
+{
+}
+
+.track__section__company__holder__right
+{
+    width: 50%;
+    position: relative;
+    display: inline-block;
+    float: right;
+    background-color: rgba(74, 187, 83, 0.47);
+    padding: 20px;
+    min-height: 150px;
+}
+
+.track__section__company__holder__right h4
+{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.track__section__company__holder__right p
+{
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 1px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.track__section__div .panel-group
+{
+    position: relative;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.track__section__status
+{
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+
+.track__section__status .label
+{
+    position: relative;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px 20px 5px;
+}
+
+.track__section__div .panel
+{
+    margin-bottom: 20px;
+    border-radius: 0;
+}
+
+.track__section__div .panel-default > .panel-heading
+{
+    border-color: #EEEEEE;
+    background-color: #ededed;
+    padding: 15px 10px;
+    border-radius: 0;
+}
+
+.track__section__div .panel-group h4
+{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.track__section__div .panel-group h4 a
+{
+    position: relative;
+    display: block;
+    text-decoration: none;
+}
+
+.track__section__div .panel-group h4 a:active, .track__section__div .panel-group h4 a:focus
+{
+    outline: none;
+}
+
+.track__progress
+{
+    position: relative;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: rgb(149, 165, 166);
+    line-height: 1.15;
+}
+
+.track__progress li
+{
+    padding: 20px 0px;
+    position: relative;
+    margin: 0px;
+    display: flex;
+}
+
+.track__progress li::after
+{
+    content: "";
+    z-index: 1;
+    background-color: rgb(221, 221, 221);
+    position: absolute;
+    left: 130px;
+    bottom: 0px;
+    top: 0px;
+    width: 1px;
+    display: block;
+}
+
+.track__progress_date
+{
+    position: relative;
+    width: 90px;
+}
+
+.track__progress_date p
+{
+    margin-top: 0px;
+    line-height: 1.5;
+    text-align: right;
+    color: rgb(53, 53, 53);
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.track__progress_date span
+{
+    margin-top: 0px;
+    margin-bottom: 8px;
+    line-height: 1.5;
+    text-align: right;
+    display: block;
+    color: inherit;
+}
+
+.track__progress_indicator
+{
+    width: 30px;
+    height: 30px;
+    top: 20px;
+    text-align: center;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+    left: 115px;
+    border-radius: 100%;
+}
+
+.track__progress_indicator__two
+{
+    position: relative;
+    width: 36px;
+    height: 36px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 100%;
+}
+
+.track__progress_indicator__two::after
+{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(221, 221, 221);
+}
+
+.indicate__more
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.track__progress_indicator__important
+{
+    background-color: #214977;
+    border: 1px solid rgba(33, 73, 119, 0.42);
+}
+
+.track__progress_indicator__important::after
+{
+    content: "";
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-image: url('../images/important.png');
+    background-attachment: cover;
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    top: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px;
+    background-color: #214977;
+}
+
+.track__progress_indicator__new
+{
+    background-color: #177805;
+    border: 1px solid rgba(23, 120, 5, 0.48);
+}
+
+.track__progress_indicator__new::after
+{
+    content: "";
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-image: url('../images/important_new.png');
+    background-attachment: cover;
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    top: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px;
+    background-color: #177805;
+}
+
+.track__progress_indicator__deliver
+{
+    background-color: #020601;
+    border: 1px solid rgba(2, 6, 1, 0.47);
+}
+
+.track__progress_indicator__deliver::after
+{
+    content: "";
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 10px;
+    height: 10px;
+    left: 50%;
+    top: 50%;
+    background-color: #ff0b0b;
+}
+
+.track__progress_info
+{
+    position: relative;
+    height: auto;
+    margin-left: 70px;
+    flex: 1 1 0%;
+}
+
+.track__progress_info p
+{
+    margin-top: 0px;
+    line-height: 1.5;
+    text-align: initial;
+    color: rgb(53, 53, 53);
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+
+.track__progress_info span
+{
+    margin-top: 0px;
+    color: inherit;
+    margin-bottom: 8px;
+    line-height: 1.5;
+    text-align: initial;
+    display: block;
+}
+
+.login_div
+{
+    position: relative;
+}
+
+.login_div form
+{
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#login
+{
+    position: relative;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#signup
+{
+    position: absolute;
+    z-index: 0;
+    opacity: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#new_login legend img
+{
+    width: 70px;
+}
+
+#reset
+{
+    position: absolute;
+    z-index: 0;
+    opacity: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.section_404
+{
+    position: relative;
+    padding-bottom: 10%;
+    padding-top: 50px;
+}
+
+.section_404 img
+{
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+}
+
+.section_404 .btn
+{
+    margin-top: 30px;
+}
+

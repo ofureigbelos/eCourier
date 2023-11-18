@@ -1,0 +1,1218 @@
+
+
+/*
+    DEMO STYLE
+*/
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+body
+{
+    font-family: dosis;
+    background: #fafafa;
+}
+
+p
+{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a,
+a:hover,
+a:focus
+{
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar
+{
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn
+{
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line
+{
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+i,
+span
+{
+    display: inline-block;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper
+{
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar
+{
+    min-width: 250px;
+    max-width: 250px;
+    color: #fff;
+    transition: all 0.3s;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: #333333;
+}
+
+#sidebarCollapse
+{
+    background-color: #872526;
+}
+
+#sidebar.active
+{
+    min-width: 80px;
+    max-width: 80px;
+    text-align: center;
+}
+
+#sidebar.active .sidebar-header h3,
+#sidebar.active .CTAs
+{
+    display: none;
+}
+
+#sidebar.active .sidebar-header strong
+{
+    display: block;
+}
+
+#sidebar ul li a
+{
+    text-align: left;
+}
+
+#sidebar.active ul li a
+{
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 0.85em;
+}
+
+#sidebar.active ul li a i
+{
+    margin-right: 0;
+    display: block;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+#sidebar.active ul ul a
+{
+    padding: 10px !important;
+}
+
+#sidebar.active .dropdown-toggle::after
+{
+    top: auto;
+    bottom: 10px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
+}
+
+#sidebar .sidebar-header
+{
+    padding: 20px;
+}
+
+#sidebar .sidebar-header strong
+{
+    display: none;
+    font-size: 1.8em;
+}
+
+#sidebar ul.components
+{
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+    height: 100vh;
+}
+
+#sidebar ul li a
+{
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover
+{
+    background: #fff;
+    color: #dc291e;
+}
+
+#sidebar ul li a i
+{
+    margin-right: 10px;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"]
+{
+    color: #fff;
+    background-color: #872526;
+}
+
+a[data-toggle="collapse"]
+{
+    position: relative;
+}
+
+.dropdown-toggle::after
+{
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a
+{
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+ul.CTAs
+{
+    padding: 20px;
+}
+
+ul.CTAs a
+{
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download
+{
+    background: #fff;
+    color: #7386D5;
+}
+
+a.article,
+a.article:hover
+{
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content
+{
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    margin-left: 250px;
+    background-color: #efefef;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px)
+{
+    #sidebar
+    {
+        min-width: 80px;
+        max-width: 80px;
+        text-align: center;
+        margin-left: -80px !important;
+    }
+    #content
+    {
+        margin-left: 0px;
+    }
+    .dropdown-toggle::after
+    {
+        top: auto;
+        bottom: 10px;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        -ms-transform: translateX(50%);
+        transform: translateX(50%);
+    }
+    #sidebar.active
+    {
+        margin-left: 0 !important;
+    }
+    #sidebar .sidebar-header h3,
+    #sidebar .CTAs
+    {
+        display: none;
+    }
+    #sidebar .sidebar-header strong
+    {
+        display: block;
+    }
+    #sidebar ul li a
+    {
+        padding: 20px 10px;
+    }
+    #sidebar ul li a span
+    {
+        font-size: 0.85em;
+    }
+    #sidebar ul li a i
+    {
+        margin-right: 0;
+        display: block;
+    }
+    #sidebar ul ul a
+    {
+        padding: 10px !important;
+    }
+    #sidebar ul li a i
+    {
+        font-size: 1.3em;
+    }
+    #sidebar
+    {
+        margin-left: 0;
+    }
+    #sidebarCollapse span
+    {
+        display: none;
+    }
+}
+
+.navbar ul
+{
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+    float: right;
+    display: inline-block;
+}
+
+.navbar ul li
+{
+    position: relative;
+    display: inline-block;
+    list-style-type: none;
+    padding: 5px 10px;
+}
+
+@media (max-width:325px)
+{
+    .navbar ul li
+    {
+        position: relative;
+        bottom: 0px;
+    }
+}
+
+#content.active-content
+{
+    margin-left: 80px;
+}
+
+.admin-sec
+{
+    position: relative;
+    background-color: #efefef;
+}
+
+.nav-tabs
+{
+    background-color: #f5f6f7;
+}
+
+.nav-tabs li a:focus, .nav-tabs li a:active
+{
+    outline: none;
+}
+
+.nav-tabs-border
+{
+    border: 1px solid #f5f6f7;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.nav-tabs li a
+{
+    border-radius: 0;
+}
+
+#tab1 input
+{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-radius: 0;
+    border: 1px solid #cccccc;
+    box-shadow: none;
+}
+
+#tab1 input:focus
+{
+    border: 1px solid #3d0042;
+}
+
+#content h1
+{
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 22px;
+    padding-left: 10px;
+}
+
+#tab2 select
+{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-radius: 0;
+    border: 1px solid #cccccc;
+    box-shadow: none;
+}
+
+#tab1 select:focus
+{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-radius: 0;
+    border: 1px solid #cccccc;
+    box-shadow: none;
+}
+
+#tab3 form
+{
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#tab3 form input
+{
+    border-radius: 0;
+    border: 1px solid #cccccc;
+    box-shadow: none;
+    height: 40px;
+    padding-bottom: 10px;
+}
+
+#tab3 form .btn
+{
+    background-color: #188976;
+    color: #fff;
+    width: 100%;
+    height: 40px;
+}
+
+@media (max-width:767px)
+{
+    #tab3 form .btn
+    {
+        margin-top: 5px;
+    }
+    #tab3 form .input-group
+    {
+        margin-bottom: 15px;
+    }
+}
+
+.t-cell
+{
+    width: 130px;
+}
+
+.t-cell a:active, .t-cell:focus
+{
+    outline: none;
+}
+
+.t-cell2
+{
+    position: relative;
+}
+
+.t-cell2 span
+{
+    display: block;
+    position: relative;
+    bottom: 10px;
+    font-size: 13px;
+}
+
+.t-cell2 h2
+{
+    font-size: 17px;
+    font-weight: bold;
+    color: #338acc;
+}
+
+.t-cell2 p
+{
+    color: #b07d00;
+    position: relative;
+    bottom: 8px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.t-cell2 a:focus, .t-cell2 a:active
+{
+    outline: none;
+}
+
+.t-cell2-active
+{
+    background-color: #0cbf00;
+    color: #fff;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding: 2px 7px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    bottom: 8px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+@media (max-width:360px)
+{
+    .t-cell2 h2
+    {
+        font-size: 14px;
+    }
+    .t-cell2 p
+    {
+        font-size: 10px;
+    }
+}
+
+@media (max-width:767px)
+{
+    .table tbody tr
+    {
+        border: none;
+    }
+    .admin-sec .main-table i
+    {
+        display: block;
+    }
+}
+
+.main-table
+{
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+.main-table i
+{
+    position: absolute;
+    right: 10px;
+    top: 60px;
+    font-size: 20px;
+    display: none;
+}
+
+.main-table-body
+{
+    border-top: 2px solid transparent;
+}
+
+.article-wrap
+{
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.article-wrap input:focus, .article-wrap select:focus, .article-wrap textarea:focus
+{
+    box-shadow: none;
+}
+
+.article-wrap input, .article-wrap select, .article-wrap textarea
+{
+    border-radius: 0;
+    border: 2px solid #eee;
+    resize: none;
+}
+
+.article-wrap label
+{
+    position: relative;
+    font-size: 14px;
+}
+
+.article-wrap span
+{
+    display: block;
+    margin-bottom: 10px;
+    position: relative;
+    bottom: 3px;
+}
+
+.btn-cancel
+{
+    width: 100%;
+    height: 45px;
+    border: none;
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+.btn-save
+{
+    background-color: #6772e5;
+    color: #fff;
+    width: 100%;
+    height: 45px;
+    border: none;
+    transition: 0.2s ease-in-out;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.btn-save:active, .btn-save:focus
+{
+    outline: none;
+    color: #fff;
+}
+
+.btn-save:hover
+{
+    background-color: #353fab;
+    color: #fff;
+}
+
+.btn-cancel:hover
+{
+    background-color: #bbb9b9;
+}
+
+.article-wrap hr
+{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border: 1px dotted #ccc;
+}
+
+.fallback
+{
+    background-color: #fff;
+    border: 2px dotted #ccc;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 50px;
+    max-width: 100%;
+    height: 170px;
+}
+
+.fallback input
+{
+    width: 100%;
+}
+
+.table
+{
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.table thead tr th
+{
+    background-color: #f5f6f7;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #726700;
+    padding: 20px 10px;
+}
+
+.table tbody tr td
+{
+    color: #1e0202;
+}
+
+.table tbody tr td span
+{
+    display: block;
+}
+
+.span1
+{
+    text-align: center;
+}
+
+#tbody tr td
+{
+    border: 1px solid #ccc;
+}
+
+.span2
+{
+    text-align: center;
+    font-weight: bold;
+}
+
+.table tbody tr td .span3
+{
+    text-align: center;
+    background-color: #f0ad4e;
+    display: inline-block;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+#order-table
+{
+    margin-bottom: 20px;
+}
+
+.settings
+{
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.btn-update
+{
+    background-color: #6772e5;
+    color: #fff;
+    width: 100%;
+    height: 45px;
+    border: none;
+    transition: 0.2s ease-in-out;
+    border-radius: 5px;
+    position: relative;
+    top: 19px;
+}
+
+@media (max-width:767px)
+{
+    .btn-update
+    {
+        top: 0px;
+    }
+}
+
+.admin-change
+{
+    background-color: #6772e5;
+    color: #fff;
+    width: 100%;
+    height: 45px;
+    border: none;
+    transition: 0.2s ease-in-out;
+    border-radius: 5px;
+    max-width: 230px;
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+
+.detail-sec
+{
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.detail-wrap
+{
+    background-color: #f5f6f7;
+    border-radius: 5px;
+    box-shadow: 0px 1px 10px -7px rgba(0, 0, 0, 0.37);
+    color: #000;
+    padding: 20px;
+}
+
+.detail-p
+{
+    color: #000;
+    position: relative;
+    margin-bottom: 0px;
+    font-size: 15px;
+}
+
+.detail-p span
+{
+    color: #877777;
+    font-weight: bold;
+    position: relative;
+}
+
+.toggle-drop
+{
+    position: relative;
+}
+
+#dropdown
+{
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+}
+
+#dropdown ul
+{
+    border-radius: 0;
+    left: auto;
+    right: 0;
+    width: 100%;
+}
+
+#dropdown .dropdown-toggle
+{
+    width: 100%;
+    border-radius: 0;
+    height: 40px;
+    border: #ccc;
+    background-color: #6d7fcc;
+    color: #fff;
+    font-weight: bold;
+}
+
+#dropdown .dropdown-toggle:active, #dropdown .dropdown-toggle:focus
+{
+    border: none;
+    background-color: #6d7fcc;
+    outline: none;
+    color: #fff;
+}
+
+.my-account
+{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.my-account-wrap
+{
+    position: relative;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 1px 10px -7px rgba(0, 0, 0, 0.37);
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.my-account-wrap h2
+{
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.my-account-wrap p
+{
+    position: relative;
+    font-weight: normal;
+    color: #5a0707;
+    font-size: 12px;
+}
+
+.my-account-wrap img
+{
+    margin-right: 10px;
+}
+
+.my-account-wrap2
+{
+    position: relative;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 1px 10px -7px rgba(0, 0, 0, 0.37);
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.my-account-wrap2 h2
+{
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #000;
+}
+
+.my-account-wrap2 p
+{
+    text-transform: capitalize;
+    font-weight: normal;
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 13px;
+}
+
+.my-account-wrap2 p a
+{
+    color: #188976;
+}
+
+.my-account-wrap2 p a:hover
+{
+    text-decoration: underline;
+}
+
+.my-account-wrap2 p a:active, .my-account-wrap2 p a:focus
+{
+    outline: none;
+}
+
+.my-account-wrap hr
+{
+    border: 0.1em dotted #ccc;
+    margin-top: 30px;
+}
+
+.my-account-wrap-div
+{
+    position: relative;
+    text-align: right;
+}
+
+.my-account-wrap-div p
+{
+    font-weight: normal;
+}
+
+#my-total
+{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#my-total span
+{
+    margin-left: 10px;
+}
+
+#add-new
+{
+    background-color: #6d7fcc;
+    color: #fff;
+    border-radius: 20px;
+    font-weight: bold;
+    box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.37);
+    font-size: 12px;
+}
+
+.my-account-wrap2 label
+{
+    font-weight: bold;
+}
+
+.my-account-wrap2 input
+{
+    border-radius: 0;
+    margin-bottom: 20px;
+}
+
+.my-account-wrap2 input:focus
+{
+    box-shadow: none;
+    border: 1px solid #188976;
+}
+
+.my-account-wrap input
+{
+    border-radius: 0;
+}
+
+.my-account-wrap input:focus
+{
+    box-shadow: none;
+    border: 1px solid #188976;
+}
+
+.my-account-wrap textarea, .my-account-wrap select
+{
+    border-radius: 0;
+    resize: none;
+    margin-bottom: 15px;
+}
+
+.my-account-wrap textarea:focus, .my-account-wrap select:focus
+{
+    box-shadow: none;
+    border: 1px solid #188976;
+}
+
+.span5
+{
+    position: relative;
+    margin-bottom: 10px;
+    bottom: 5px;
+    font-size: 12px;
+    display: block;
+    text-align: left;
+}
+
+.my-account-wrap checkbox
+{
+    font-weight: normal;
+    background-color: #831010;
+    margin-top: 30px;
+}
+
+.btn-admin2
+{
+    border-radius: 0;
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.my-account-wrap-div2
+{
+    position: relative;
+    margin-bottom: -80px;
+}
+
+.my-account-wrap-cover
+{
+    position: relative;
+    bottom: 70px;
+    left: 80px;
+}
+
+.my-account-wrap-cover p
+{
+    position: relative;
+}
+
+.my-account-wrap-cover span
+{
+    position: relative;
+    display: block;
+    bottom: 12px;
+    color: #877777;
+}
+
+.my-account-wrap-div2 hr
+{
+    position: relative;
+    bottom: 80px;
+}
+
+a, a:active, a:focus
+{
+    outline: none;
+}
+
+#dropdown2
+{
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+}
+
+#dropdown2 .dropdown-toggle
+{
+    width: 100%;
+    border-radius: 0;
+    height: 40px;
+    border: #ccc;
+    background-color: #188976;
+    color: #fff;
+    font-weight: bold;
+}
+
+#dropdown2 ul
+{
+    border-radius: 0;
+    left: auto;
+    right: 0;
+    width: 100%;
+}
+
+@media (max-width:767px)
+{
+    #dropdown, #dropdown2
+    {
+        margin-top: 20px;
+    }
+}
+
+.label-custom-label
+{
+    background-color: #997ee5;
+}
+
+.notify
+{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.favicon
+{
+    width: 50px;
+}
+
+.my-account-wrap legend
+{
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+#updateStatus
+{
+    position: relative;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-top: 30px;
+    display: none;
+}
+
+#addNewStatus
+{
+    position: absolute;
+    z-index: 0;
+    opacity: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.link
+{
+    padding: 10px 15px;
+    background: transparent;
+    border: #bccfd8 1px solid;
+    border-left: 0px;
+    cursor: pointer;
+    color: #607d8b;
+}
+
+.disabled
+{
+    cursor: not-allowed;
+    color: #bccfd8;
+}
+
+.current
+{
+    background: #bccfd8;
+}
+
+first
+{
+    border-left: #bccfd8 1px solid;
+}
+
+.question
+{
+    font-weight: bold;
+}
+
+.answer
+{
+    padding-top: 10px;
+}
+
+#pagination
+{
+    margin-top: 20px;
+    padding-top: 30px;
+    border-top: #F0F0F0 1px solid;
+}
+
+.dot
+{
+    padding: 10px 15px;
+    background: transparent;
+    border-right: #bccfd8 1px solid;
+}
+
+#overlay
+{
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 999;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#overlay div
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -32px;
+    margin-left: -32px;
+}
+
+.page-content
+{
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.pagination-setting
+{
+    padding: 10px;
+    margin: 5px 0px 10px;
+    border: #bccfd8  1px solid;
+    color: #607d8b;
+}
+
+#pagination_pointer
+{
+    margin-bottom: 50px;
+}
+

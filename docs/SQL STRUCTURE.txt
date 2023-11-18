@@ -1,0 +1,179 @@
+SQL STRUCTURE
+++++++++++++++++++++++++++=
+
+TABLES ---
+
+ec_admin
+ec_admin_add
+ec_config
+ec_config_status
+ec_courier
+ec_courier_status
+
+
+
+STRUCTURE FOR ADMIN TABLE
++++++++++++++++++++++++++++++++++++++++++
+id 
+user_id		int					unq
+name		var 		100		
+username	var			20		unq
+email		var			100		unq
+password	var			100
+phone		var			15		unq
+token		var			100		unq
+role		var			20
+status		tinyint
+date		bigint
+
+
+isssssssii
+/*
+9 columns
+user_id, name, username, email, password, phone, token, role, status
+$user_id; $name; $username; $email; $password; $phone; $token; $role; $status;
+*/
+
++++++++++++++++++++++++++++++++++++++++++
+STRUCTURE FOR ADMIN ADDRESS TABLE
++++++++++++++++++++++++++++++++++++++++++
+id 
+user_id 	int					unq
+origin		tinyint 				
+state		var			100		
+address		var			255		
+timezone	tinyint
+branch		tinyint				
+dob			bigint				
+date		bigint		
+
+
+iissiiii
+/*
+8 columns
+user_id, origin, state, address, timezone, branch, dob, date
+$user_id; $origin; $state; $address; $timezone; $branch; $dob; $date;
+*/
+
++++++++++++++++++++++++++++++++++++++++++
+STRUCTURE FOR CONFIG TABLE
++++++++++++++++++++++++++++++++++++++++++
+id 
+name	var		50
+value	var		255	
+
+ss
+/*
+2 columns
+name, value
+INSERT INTO ec_config (`name`, `value`) values('site_name', NULL);
+INSERT INTO ec_config (`name`, `value`) values('site_title', NULL);
+INSERT INTO ec_config (`name`, `value`) values('site_desc', NULL);
+INSERT INTO ec_config (`name`, `value`) values('site_email', NULL);
+INSERT INTO ec_config (`name`, `value`) values('site_status', NULL);
+INSERT INTO ec_config (`name`, `value`) values('email_notification', NULL);
+INSERT INTO ec_config (`name`, `value`) values('email_validation', NULL);
+INSERT INTO ec_config (`name`, `value`) values('smtp_username', NULL);
+INSERT INTO ec_config (`name`, `value`) values('smtp_password', NULL);
+INSERT INTO ec_config (`name`, `value`) values('smtp_host', NULL);
+INSERT INTO ec_config (`name`, `value`) values('smtp_from_name', NULL);
+INSERT INTO ec_config (`name`, `value`) values('smtp_from_email', NULL);
+INSERT INTO ec_config (`name`, `value`) values('browser_color', NULL);
+INSERT INTO ec_config (`name`, `value`) values('favicon', NULL);
+INSERT INTO ec_config (`name`, `value`) values('waybill', NULL);
+*/
+
++++++++++++++++++++++++++++++++++++++++++
+STRUCTURE FOR CONFIG STATUS TABLE
++++++++++++++++++++++++++++++++++++++++++
+
+id
+name	var			20		unq
+value	tinyint				unq	
+color	var			10
+
+sis
+/*
+3 columns  
+name, value, color
+INSERT INTO ec_config_status (`name`, `value`) values('Pending', '0', '#224f77');
+INSERT INTO ec_config_status (`name`, `value`) values('Processing', '1', '#f2930d');
+INSERT INTO ec_config_status (`name`, `value`) values('In Transit', '2', '#f2930d');
+INSERT INTO ec_config_status (`name`, `value`) values('Delivered', '3', '#008000');
+INSERT INTO ec_config_status (`name`, `value`) values('Cancelled', '4', '#e60000');
+INSERT INTO ec_config_status (`name`, `value`) values('Draft', '5', '#041652');
+*/
+
++++++++++++++++++++++++++++++++++++++++++
+STRUCTURE FOR COURIER TABLE
++++++++++++++++++++++++++++++++++++++++++
+
+id
+waybill				var			15		unq
+invoice				bigint				unq
+shipper_name		var	 		100				
+shipper_phone		var			15	
+shipper_email		var 		100	
+shipper_address		var 		255
+rec_name			var			100
+rec_phone			var			15
+rec_email			var			100	
+rec_address			var			255	
+shipment_type		var			20	
+shipment_mode		var			20		
+product_info		var			100	
+weight				var			20
+qty					var			15	
+payment_mode		var			20	
+total_amount		var			20	
+from_des			tinyint				
+to_des				tinyint				
+pickup_time			var			15	
+pickup_date			bigint		
+status_notice		var			20	
+status				tinyint			
+status_del			tinyint				
+comment				var			100	
+date				bigint				
+
+
+sisssssssssssssssiisisiisi
+/*
+$waybill_no; $invoice_no; $shipper_name; $shipper_phone; $shipper_email; $shipper_address; $rec_name; $rec_phone; $rec_email; $rec_address; $shipment_type; $shipment_mode; $product_info; $weight; $qty; $payment_mode; $total_amount; $from_des; $to_des; $pickup_time; $pickup_date; $status_notice; $status; $status_del; $comment; $date
+
+25 columns 
+waybill_no, invoice_no, shipper_name, shipper_phone, shipper_email, shipper_address, rec_name, rec_phone, rec_email, rec_address, shipment_type, shipment_mode, product_info, weight, qty, payment_mode, total_amount, from_des, to_des, pickup_time, pickup_date, status_notice, status, status_del, comment, date
+*/
+
++++++++++++++++++++++++++++++++++++++++++
+STRUCTURE FOR COURIER STATUS TABLE
++++++++++++++++++++++++++++++++++++++++++
+
+id
+invoice			bigint			
+new_loc			tinyint			
+to_des			tinyint			
+comment			var			100
+status_notice	var			20
+status_del		tinyint		
+status_key		var			100
+date			bigint			
+
+
+
+
+
+iiissisi
+/*
+8 columns 
+invoice, new_loc, to_des, comment, status_notice, status_del, status_key
+
+$invoice_no; $new_loc; $to_des; $comment; $status_notice; $status_del; $status_key;
+*/
+
+
+
+
+
+
+

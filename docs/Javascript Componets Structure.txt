@@ -1,0 +1,76 @@
+viewController ----- IIFE
+------------------------------------
+
+string 
+	submitSpan: ".submit span",
+	submitImg: ".submit img",
+	submitIcon: ".submit i",
+	allElements: "textarea,button,input,select",
+	checkError: ".check-error",
+	checkError_P: ".check-error p",
+	checkError_I: ".check-error i",
+	alertDanger: "alert alert-danger",
+	alertDanger_style: "5px solid #b54442",
+	alertInfo: "alert alert-info",
+	alertInfo_style: "5px solid #3170a1",
+	alertSuccess: "alert alert-success",
+	alertSuccess_style: "5px solid #3c763d",
+	hidden: "hidden",
+	selected: "selected",
+	disabled: "disabled",
+	notifyIn: "animated bounceIn",
+	notifyOut: "animated bounceOut",
+	notifyIcon: "fa fa-info-circle",
+	notifyFrom: "top",
+	notifyAlign: "right",
+	animateEffect: "fadeIn",
+	animated: "animated",
+	swalTitle: "<p class='pop-error title'>",
+	swalHTML: "<p class='pop-error'>",
+	swalClose: "</p>"
+	
+
+messageTemp ----- object
+	success: ---- function(parent, message)
+	danger: ---- function(parent, message)
+	info: ---- function(parent, message)
+	
+return ----- object
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+baseController  ----- IIFE
+------------------------------------
+	
+openConsole ---- function() ---- Console custom design
+
+openLoader ---- function(parent, disable, text)	
+
+return ------ object
+	init: ---- function()
+	datePicker: ---- function(selector)
+	timePicker: ---- function(selector)
+	gobak: ---- function()
+	scrollToObject: ---- function(selector, callback)
+	formSubmit: ---  function(form,btnText,file,normal,before,after,message,debugError,scroll)
+	showMessage: ---- function(parent, message, type)
+	showMessage_POP: ---- function(title, html, type, callback)
+	showMessage_POP_ACCEPT: ---- function(title, html, type, callback)
+	bootstrapNotify: ---- function(allowDismiss,type,delay,icon,title,msg,enterAM,exitAM,from,align)
+	animateEelem: ---- function(before,selector,element,effect)
+	toggleSelector: ---- function(selector, size, onText, offText, onColor, offColor)
+	toggleSelectorSubmit: ---- function(selector,inputName,file,after,debugError)
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+For pagination
+------------------------------------
+	getPaginationResult --- function(getURL,loader)
+	changePagination --- function(selector,getURL,loader)
+	
+	
+	
+	
+	
+	
+	
